@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:checked + div {
+    @apply border-slate-500;
+}
+
+.checkbox polyline{
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 18px;
+    stroke-dashoffset: 18px;
+    transition: all 0.3s ease;
+}
+
+input:checked + .checkbox polyline {
+    stroke-dashoffset: 0;
+}
